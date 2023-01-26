@@ -55,6 +55,12 @@ $Global:TortoiseGitSettings = new-object PSObject -Property @{
         "checkout" = "switch";
         "fetch" = "sync";
         "sync" = "sync";
+        "revisiongraph" = "revisiongraph";
+        "repobrowser" = "repobrowser";
+        "stashpop" = "stashpop";
+        "branch" = "branch";
+        "clone" = "clone";
+        "list" = "list";
     }
 }
 
@@ -65,7 +71,8 @@ function tgit {
             $args[0] = $Global:TortoiseGitSettings.TortoiseGitCommands.Get_Item($args[0])
         }
 
-        if ($args[0] -eq "help") {
+        # if ($args[0] -eq "help") {
+        if ($args[0] -eq "list") {
             # Replace the built-in help behaviour with just a list of commands
             $Global:TortoiseGitSettings.TortoiseGitCommands.Values.GetEnumerator() | Sort-Object | Get-Unique
             return
