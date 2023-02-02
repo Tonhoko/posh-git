@@ -61,6 +61,13 @@ $Global:TortoiseGitSettings = new-object PSObject -Property @{
         "branch" = "branch";
         "clone" = "clone";
         "list" = "list";
+        "bisect" = "bisect";
+        "firststart" = "firststart";
+        "showcompare" = "showcompare";
+        "updatecheck" = "updatecheck";
+        "daemon" = "daemon";
+        "tag" = "tag";
+        "lfslocks" = "lfslocks";
     }
 }
 
